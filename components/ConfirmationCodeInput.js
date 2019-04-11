@@ -212,7 +212,6 @@ export default class ConfirmationCodeInput extends Component {
       if (compareWithCode) {
         const isMatching = this._isMatchingCode(code, compareWithCode, ignoreCase);
         onFulfill(isMatching, code);
-        !isMatching && this.clear();
       } else {
         onFulfill(code);
       }
